@@ -4,7 +4,7 @@ package:
 
 source:
   git_rev: v0.0.1
-  git_url: https://github.com/LucasESBS/scoreCT
+  git_url: https://github.com/asaravia-butler/scoreCT
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - seaborn
 
 about:
-  home: https://github.com/LucasESBS/scoreCT
+  home: https://github.com/asaravia-butler/scoreCT
   license: MIT
   license_familY: MIT
   license_file: LICENSE.md
