@@ -12,7 +12,7 @@ setuptools.setup(
     description="scoreCT: Automated cell type annotation in scRNA-seq data",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/LucasESBS/scoreCT",
+    url="https://github.com/asaravia-butler/scoreCT",
     packages=setuptools.find_packages(),
     classifiers=(
             "Programming Language :: Python :: 3",
