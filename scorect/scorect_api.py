@@ -115,13 +115,15 @@ def wrangle_ranks_from_anndata(anndata, cluster_key='louvain'):
     top_gene = pd.DataFrame(anndata.uns['rank_genes_groups']['names']).loc[:nb_marker]
     marker_df = pd.DataFrame()
     # Order values
+    concat_list = []
     for i in top_score.columns:
         concat = pd.concat([top_score[[str(i)]], top_adjpval[str(i)], top_gene[[str(i)]]], axis=1, ignore_index=True)
         concat['cluster_number'] = i
         col = list(concat.columns)
         col[0], col[1], col[-2] = 'z_score', 'adj_pvals', 'gene'
         concat.columns = col
-        marker_df = marker_df.append(concat)
+        concat_list.append(concat)
+    marker_df = pd.concat(concat_list, ignore_index=True)
     return marker_df
 
 
